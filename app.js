@@ -44,6 +44,10 @@ main().then(function() {
     console.log("Mongoose connected!");
 }).catch(err => console.log(err));
 
+app.get('/', (req, res) => {
+    res.render('upload.ejs')
+})
+
 //  A Page for uploading new database entry
 app.get('/upload', (req, res) => {
     res.render('upload.ejs')
