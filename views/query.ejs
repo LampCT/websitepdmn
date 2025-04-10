@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheets/shared.css">
+    <link rel="stylesheet" href="./stylesheets/query.css">
+    <script defer src="./shared.js"></script>
+    <script defer src="./query.js"></script>
+    <title>Upload</title>
+</head>
+    <body class="flex-pane">
+        <%- include("./partials/header") %>
+
+        <div class="content">
+            <form class="query-form" id="query-form" action="" method="">
+                    <input type="text" name="query-string" placeholder="Search">
+
+                    <div>
+                        <input type="checkbox" name="query-matches">
+                        <label class="attribute-label" for="matches">Matches</label>
+
+                        <input type="checkbox" name="query-players">
+                        <label class="attribute-label" for="players">Players</label>
+
+                        <input type="checkbox" name="query-sort">
+                        <label class="attribute-label" for="sort">Descending</label>
+                    </div>
+
+                    <div>
+                        <label class="attribute-label" for="cuttoff-date">Latest date:</label>
+                        <input type="date" name="cutoff-date">
+                    </div>
+
+                    <div>
+                        <label class="attribute-label" for="cuttoff-elo">Lowest elo:</label>
+                        <input type="number" name="cutoff-elo">
+                    </div>
+
+                    <button id="query-submit" type="submit">Search</button>
+            </form>
+            <div class="results-pane" id="results-pane">
+            </div>
+        </div>
+
+        <%- include("./partials/footer") %>
+    </body>
+</html>

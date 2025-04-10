@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheets/shared.css">
+    <link rel="stylesheet" href="./stylesheets/list.css">
+    <script defer src="./shared.js"></script>
+    <script defer src="./list.js"></script>
+    <title>Upload</title>
+</head>
+<body class="flex-pane">
+    <%- include("./partials/header") %>
+
+    <div class="content">
+        <div class = "list-box">
+            <% players.forEach(player => { %>
+                <div class="player-badge">
+                    <p><%- player.full_name %></p>
+                    <p><%- player.peak_elo %></p>
+                    <section>
+                    <% player.matches.forEach(match => { %>
+                        <div class="match-icon" id="<%- match.drew %>">
+                            <div class="match-hover-window">
+                                <p>Winner: <%- match.winner %></p>
+                                <p>Loser: <%- match.loser %></p>
+                                <p>Date: <%- new Date(match.began_on).toLocaleDateString('en-US') %></p>
+                            </div>
+                        </div>
+                    <% }) %>    
+                    </section>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+
+    <%- include("./partials/footer") %>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheets/shared.css">
+    <link rel="stylesheet" href="./stylesheets/upload.css">
+    <script defer src="./shared.js"></script>
+    <script defer src="./upload.js"></script>
+    <title>Upload</title>
+</head>
+<body class="flex-pane">
+    <%- include("./partials/header") %>
+
+    <div class="content">
+        <div class="upload-pane">
+            <div id="form-pane">
+                <form class="upload-form" id="player-form" action="" method="">
+                    <label for="string">Player Name:</label>
+                    <input name="string" type="text">
+                    <label for="date">Debut:</label>
+                    <input name="date" type="date">
+                    <label for="elo">Elo:</label>
+                    <input name="elo" type="number">
+                </form>
+            </div>
+            <div id="submit-upload">
+                <button form="player-form" type="submit">Submit</button>
+            </div>
+        </div>
+        <div class="upload-pane">
+            <div id="form-pane">
+                <form class="upload-form" id="match-form" action="" method="">
+                    <label for="string">Winner Name:</label>
+                    <input name="string" type="text">
+                    <label for="string1">Loser Name:</label>
+                    <input name="string1" type="text">
+                    <label for="date">Began on:</label>
+                    <input name="date" type="date">
+                    <div>
+                        <label for="drew">Drew:</label>
+                        <select name="drew">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div id="submit-upload">
+                <button form="match-form" type="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <%- include("./partials/footer") %>
+</body>
+</html>

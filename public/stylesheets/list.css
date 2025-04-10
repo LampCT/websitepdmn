@@ -1,0 +1,6 @@
+.list-box {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5%; /* Adjust the value as needed */
+}

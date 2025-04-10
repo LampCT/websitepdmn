@@ -1,0 +1,45 @@
+.content {
+    padding: 0 23%;
+    box-sizing: border-box;
+}
+
+.query-form {
+    height: 20%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.query-form input[type=text] {
+    grid-column: span 3;
+    font-size: 3rem;
+    border-style: none;
+    border-bottom-style: solid;
+    border-bottom-color: var(--accent1);
+    padding-left: 15px;
+    margin-bottom: 15px;
+    background-color: var(--bg-color);
+    opacity: 0.7;
+}
+
+.query-form input:focus-visible {
+    outline: none;
+}
+
+#query-submit {
+    width: 40%;
+}
+
+.results-pane {
+    margin-top: 3%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.7%;
+    overflow: visible;
+}
+
+.player-badge section {
+    margin: 0;
+}
