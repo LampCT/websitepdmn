@@ -36,8 +36,13 @@ app.use(express.json())
 app.use(express.static('public'))
 app.use(express.static('src'))
 
-mongoose.connect('mongodb://localhost:27017/test').catch(error => 
-console.log("Something went wrong: " + error))
+async function main() {
+    await mongoose.connect('mongodb://root:example@mongo:27017');
+}
+
+main().then(function() {
+    console.log("Mongoose connected!");
+}).catch(err => console.log(err));
 
 //  A Page for uploading new database entry
 app.get('/upload', (req, res) => {
